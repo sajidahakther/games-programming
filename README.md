@@ -1,2 +1,2 @@
-# games-programming
-Developing interactive graphical applications, games, using p5js
+## Games Programming
+Developing mini interactive graphical applications, games, using p5js
