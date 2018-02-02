@@ -20,6 +20,5 @@ function Spacecraft() {
 
     var r = map(this.spacecraft, 0, width / 2, 16, 40);
      ellipse(sx, sy, r, r);
-    //image(images[1], sx, sy, r, r);
   }
 }
