@@ -71,7 +71,6 @@ function setup() {
   //METEORS
   meteors.push(new Meteor());
 
-
   //COLLECTIBLES
   astronauts = new Group();
 
@@ -100,18 +99,17 @@ function draw() {
   state();
 }
 
-
-
-/////////////[ SCREENS ]/////////////
+//SCREENS
 
 function startscreen() {
   background(images[0]);
 
   //VORTEX ANIMATION
+  /* Circle noise, set to white, with a random distribution within the 
+  circle vector that has been creating using the cos and sine angle. */
   push();
   noFill();
   translate(width / 2, height / 2);
-  // Circle noise, set to white, with a random distribution within the circle vector that has been creating using the cos and sine angle.
   for (i = 0; i < 50; i++) {
     stroke(255);
     strokeWeight(1);
@@ -146,7 +144,6 @@ function startscreen() {
   }
   pop();
 
-
   rectMode(CENTER);
   fill(e.r, e.g, e.b, 100);
   strokeWeight(2);
@@ -162,7 +159,6 @@ function startscreen() {
 
   timecounter = 1000; //resets the timer
 }
-
 
 function playscreen() {
   background(images[0]);
@@ -278,9 +274,6 @@ function playscreen() {
     }
   }
 
-  /* Create an if statement, if the timer reaches a certain
-  amount, the timer sounds begins playing as warning. */
-
   scorecounter++;
   text("SCORE: " + scorecounter, 900, 25);
 }
@@ -310,13 +303,10 @@ function instructionsscreen() {
   }
 }
 
-
-
-/////////////[ GAMEOVER SCREENS ]/////////////
+//GAMEOVER SCREENS 
 
 function timeoverscreen() {
   background(images[0]);
-
 
   for (var i = 0; i < cdiameter; i++) {
     for (var j = 0; j < rdiameter; j++) {
@@ -342,9 +332,7 @@ function timeoverscreen() {
   text("TRY AGAIN", width / 2, height / 2 + 40);
 }
 
-
-
-/////////////[ + FUNCTIONS ]/////////////
+//FUNCTIONS
 
 function Collectibles(type, x, y) {
   var astro = createSprite(x, y);
@@ -384,13 +372,11 @@ function bar(x, y, w, h) {
   rect(x, y, w, h);
 }
 
-
-/////////////[ KEY/MOUSE EVENTS ]/////////////
+//KEY/MOUSE EVENTS
 
 function mousePressed() {
   for (var i = 0; i < meteors.length; i++) {
     if (mouseX > meteors.w) {
-      //meteors.splice(i, 1);
       console.log("touched");
     }
   }
