@@ -1,2 +1,2 @@
 ## Games Programming
-Developing mini interactive graphical applications, games, using p5js
+Space themed games built using p5.js
